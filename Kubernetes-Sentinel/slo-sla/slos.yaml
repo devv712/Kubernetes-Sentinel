@@ -1,0 +1,25 @@
+slos:
+  - name: "frontend-availability"
+    target: 99.9%
+    window: 30d
+    description: "Frontend must be available 99.9% of the time"
+    indicator:
+      metric: "http_requests_total"
+      success_criteria: "status != 5xx"
+
+  - name: "api-latency"
+    target: 99.0%
+    window: 30d
+    description: "99% of API requests must be served within 300ms"
+    indicator:
+      metric: "http_request_duration_seconds"
+      threshold: 0.3
+
+alerting:
+  burn_rate:
+    - window: 1h
+      threshold: 14.4 # Alert if burning 2% budget in 1h
+      severity: critical
+    - window: 6h
+      threshold: 6.0
+      severity: warning
