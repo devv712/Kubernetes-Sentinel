@@ -13,63 +13,8 @@ Resilience Testing & SRE Practices
 To validate reliability, Chaos Engineering is introduced using Chaos Mesh or Litmus to simulate pod, node, and network failures. SLOs and SLIs are defined using Prometheus metrics to continuously measure system reliability, availability, and performance, demonstrating strong alignment with modern SRE and DevOps best practices.
 
 High-Level Architecture:
-Users
-  |
-Ingress (NGINX / ALB)
-  |
-Kubernetes Cluster (EKS / kind / kubeadm)
-  |
-Microservices Application
-  |
-------------------------------------------------
-|            Observability Stack               |
-|                                              |
-|  - Prometheus (Metrics Collection)           |
-|  - Grafana (Visualization & Dashboards)      |
-|  - Loki (Centralized Logging)                |
-|  - Alertmanager (Alerting & Notifications)   |
-------------------------------------------------
+<img width="719" height="590" alt="image" src="https://github.com/user-attachments/assets/39f0cdf0-db76-49ea-996d-5e6474e889eb" />
 
-Self-Healing & Reliability Mechanisms
-- Kubernetes pod auto-restart (liveness/readiness probes)
-- Horizontal Pod Autoscaler (HPA)
-- Cluster Autoscaler (node scaling & replacement)
-- Node auto-recovery
-- Traffic rerouting via Services / Ingress
-- Chaos Engineering for resilience testing
 
 Repository Structure:
-Kubernetes-Sentinel/
-│
-├── app/
-│   ├── frontend/                # Frontend microservice (UI layer)
-│   └── backend/                 # Backend microservice (API/business logic)
-│
-├── k8s/
-│   ├── deployments/             # Kubernetes Deployment manifests
-│   ├── services/                # ClusterIP / NodePort / LoadBalancer services
-│   ├── ingress/                 # Ingress resources (NGINX / ALB)
-│   ├── hpa/                     # Horizontal Pod Autoscaler configurations
-│   └── pdb/                     # Pod Disruption Budgets for high availability
-│
-├── observability/
-│   ├── prometheus/              # Prometheus setup and scrape configs
-│   ├── grafana/
-│   │   └── dashboards/          # Custom Grafana dashboards (JSON)
-│   ├── loki/                    # Centralized logging configuration
-│   └── alertmanager/            # Alert rules and notification policies
-│
-├── chaos/
-│   ├── pod-failure.yaml         # Chaos experiment: pod failure injection
-│   ├── node-failure.yaml        # Chaos experiment: node failure simulation
-│   └── network-latency.yaml     # Chaos experiment: network delay testing
-│
-├── slo-sla/
-│   ├── slis.md                  # Service Level Indicators definition
-│   ├── slos.yaml                # Service Level Objectives configuration
-│   └── error-budget.md          # Error budget calculation and policies
-│
-├── scripts/
-│   └── load-test.sh             # Load testing script to validate scaling & SLOs
-│
-└── README.md                    # Project documentation and architecture
+<img width="762" height="801" alt="image" src="https://github.com/user-attachments/assets/623186f9-0f6d-42e3-a3b0-0b4c92e44db0" />
