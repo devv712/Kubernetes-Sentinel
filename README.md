@@ -1,4 +1,4 @@
-# Kubernetes-Sentinel: Kubernetes observability and self-healing platform using Prometheus, Grafana, Loki, Alertmanager, HPA, autoscaling, and chaos engineering to ensure high availability and reliability.
+# Kubernetes-Sentinel: – Observability & Self-Healing System
 
 Project Overview:
 This project implements a production-grade Kubernetes Observability and Self-Healing System designed to monitor, detect, and automatically recover from failures in a cloud-native environment. A Kubernetes cluster is deployed and instrumented using Prometheus for metrics collection, Grafana for visualization, and Loki for centralized logging, with all components managed via Helm for scalability and maintainability.
