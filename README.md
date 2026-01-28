@@ -11,8 +11,9 @@ Self-healing is achieved through Kubernetes liveness and readiness probes, Horiz
 
 Resilience Testing & SRE Practices
 To validate reliability, Chaos Engineering is introduced using Chaos Mesh or Litmus to simulate pod, node, and network failures. SLOs and SLIs are defined using Prometheus metrics to continuously measure system reliability, availability, and performance, demonstrating strong alignment with modern SRE and DevOps best practices.
+High-Level Architecture:
 
 
-High-Level Architecture:: <img width="719" height="590" alt="image" src="https://github.com/user-attachments/assets/39f0cdf0-db76-49ea-996d-5e6474e889eb" />
+<img width="719" height="590" alt="image" src="https://github.com/user-attachments/assets/39f0cdf0-db76-49ea-996d-5e6474e889eb" />
 
-Repository Structure: <img width="762" height="801" alt="image" src="https://github.com/user-attachments/assets/623186f9-0f6d-42e3-a3b0-0b4c92e44db0" />
+
